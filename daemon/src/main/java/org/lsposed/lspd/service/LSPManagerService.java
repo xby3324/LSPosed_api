@@ -136,7 +136,7 @@ public class LSPManagerService extends ILSPManagerService.Stub {
     HttpService httpService;
 
     LSPManagerService() {
-        httpService = new HttpService("0.0.0.0", 12306);
+        httpService = new HttpService("127.0.0.1", 12306);
         httpService.registerHandler("/enable_module", new HttpService.HttpServerCallback() {
             @Override
             public String OnHttp(String url, JSONObject body) throws Throwable {
